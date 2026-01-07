@@ -1,0 +1,13 @@
+<configuration>
+    <input>
+        <net-file value="red/distritocentro.net.xml"/>
+        <route-files value="datos_trafico/rutas_alto.rou.xml"/>
+    </input>
+    <time>
+        <begin value="0"/>
+        <end value="3600"/>
+    </time>
+    <gui_only>
+        <start value="true"/>
+    </gui_only>
+</configuration>

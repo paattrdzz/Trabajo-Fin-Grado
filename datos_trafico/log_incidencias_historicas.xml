@@ -1,0 +1,183 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<IncidenciasHistoricas>
+  <Incidencia>
+    <Posicion>
+      <Latitud>40.473485793045</Latitud>
+      <Longitud>-3.67356795079695</Longitud>
+    </Posicion>
+    <Identificador>I20251203-0027</Identificador>
+    <Codigo>01NC20</Codigo>
+    <Texto>C-I-TRA-02 VEHICULO DETENIDO OBSTRUYENDO PARCIALMENTE EL PASO A CIELO ABIERTO</Texto>
+    <FechaCierre>SIN CERRAR</FechaCierre>
+  </Incidencia>
+  <Incidencia>
+    <Posicion>
+      <Latitud>40.4482517716642</Latitud>
+      <Longitud>-3.74115087035244</Longitud>
+    </Posicion>
+    <Identificador>I20251204-0026</Identificador>
+    <Codigo>22XC30</Codigo>
+    <Texto>C-I-TRA-01 VEHICULO PARADO EN ARCEN, ISLETA O APARTADERO A CIELO ABIERTO</Texto>
+    <FechaCierre>SIN CERRAR</FechaCierre>
+  </Incidencia>
+  <Incidencia>
+    <Posicion>
+      <Latitud>40.4025425886641</Latitud>
+      <Longitud>-3.66655121381957</Longitud>
+    </Posicion>
+    <Identificador>I20251210-0043</Identificador>
+    <Codigo>09XL50</Codigo>
+    <Texto>C-P-ACC-01 ACCIDENTE LEVE A CIELO ABIERTO</Texto>
+    <FechaCierre>SIN CERRAR</FechaCierre>
+  </Incidencia>
+  <Incidencia>
+    <Posicion>
+      <Latitud>40.4353176307592</Latitud>
+      <Longitud>-3.66003149096964</Longitud>
+    </Posicion>
+    <Identificador>I20251210-0045</Identificador>
+    <Codigo>05NC70</Codigo>
+    <Texto>C-I-TRA-02 VEHICULO DETENIDO OBSTRUYENDO PARCIALMENTE EL PASO A CIELO ABIERTO</Texto>
+    <FechaCierre>SIN CERRAR</FechaCierre>
+  </Incidencia>
+  <Incidencia>
+    <Posicion>
+      <Latitud>40.389612195757</Latitud>
+      <Longitud>-3.68143881029537</Longitud>
+    </Posicion>
+    <Identificador>I20251210-0046</Identificador>
+    <Codigo>11XC81</Codigo>
+    <Texto>T-I-TRA-02 VEHICULO DETENIDO OBSTRUYENDO PARCIALMENTE EL PASO EN TUNEL</Texto>
+    <FechaCierre>SIN CERRAR</FechaCierre>
+  </Incidencia>
+  <Incidencia>
+    <Posicion>
+      <Latitud>40.4435684593334</Latitud>
+      <Longitud>-3.66319964624283</Longitud>
+    </Posicion>
+    <Identificador>I20251210-0048</Identificador>
+    <Codigo>04RE00</Codigo>
+    <Texto>C-I-TRA-02 VEHICULO DETENIDO OBSTRUYENDO PARCIALMENTE EL PASO A CIELO ABIERTO</Texto>
+    <FechaCierre>SIN CERRAR</FechaCierre>
+  </Incidencia>
+  <Incidencia>
+    <Posicion>
+      <Latitud>40.4844975627428</Latitud>
+      <Longitud>-3.6977364613737</Longitud>
+    </Posicion>
+    <Identificador>I20251210-0050</Identificador>
+    <Codigo>31RA00</Codigo>
+    <Texto>C-I-TRA-02 VEHICULO DETENIDO OBSTRUYENDO PARCIALMENTE EL PASO A CIELO ABIERTO</Texto>
+    <FechaCierre>SIN CERRAR</FechaCierre>
+  </Incidencia>
+  <Incidencia>
+    <Posicion>
+      <Latitud>40.4189376248665</Latitud>
+      <Longitud>-3.6583525685244</Longitud>
+    </Posicion>
+    <Identificador>I20251210-0051</Identificador>
+    <Codigo>07XL54</Codigo>
+    <Texto>C-I-TRA-02 VEHICULO DETENIDO OBSTRUYENDO PARCIALMENTE EL PASO A CIELO ABIERTO</Texto>
+    <FechaCierre>SIN CERRAR</FechaCierre>
+  </Incidencia>
+  <Incidencia>
+    <Posicion>
+      <Latitud>40.4547163523807</Latitud>
+      <Longitud>-3.66358320278124</Longitud>
+    </Posicion>
+    <Identificador>I20251210-0052</Identificador>
+    <Codigo>03CC10</Codigo>
+    <Texto>C-I-TRA-02 VEHICULO DETENIDO OBSTRUYENDO PARCIALMENTE EL PASO A CIELO ABIERTO</Texto>
+    <FechaCierre>SIN CERRAR</FechaCierre>
+  </Incidencia>
+  <Incidencia>
+    <Posicion>
+      <Latitud>40.4839868047317</Latitud>
+      <Longitud>-3.67687266833394</Longitud>
+    </Posicion>
+    <Identificador>I20251211-0017</Identificador>
+    <Codigo>32XC00</Codigo>
+    <Texto>C-I-TRA-01 VEHICULO PARADO EN ARCEN, ISLETA O APARTADERO A CIELO ABIERTO</Texto>
+    <FechaCierre>SIN CERRAR</FechaCierre>
+  </Incidencia>
+  <Incidencia>
+    <Posicion>
+      <Latitud>40.423692031902</Latitud>
+      <Longitud>-3.72896620714981</Longitud>
+    </Posicion>
+    <Identificador>I20251211-0019</Identificador>
+    <Codigo>19NC20</Codigo>
+    <Texto>C-I-TRA-01 VEHICULO PARADO EN ARCEN, ISLETA O APARTADERO A CIELO ABIERTO</Texto>
+    <FechaCierre>SIN CERRAR</FechaCierre>
+  </Incidencia>
+  <Incidencia>
+    <Posicion>
+      <Latitud>40.4615338647273</Latitud>
+      <Longitud>-3.66547718295464</Longitud>
+    </Posicion>
+    <Identificador>I20251211-0020</Identificador>
+    <Codigo>02XC70</Codigo>
+    <Texto>C-I-TRA-02 VEHICULO DETENIDO OBSTRUYENDO PARCIALMENTE EL PASO A CIELO ABIERTO</Texto>
+    <FechaCierre>SIN CERRAR</FechaCierre>
+  </Incidencia>
+  <Incidencia>
+    <Posicion>
+      <Latitud>40.4415328574113</Latitud>
+      <Longitud>-3.65965006421542</Longitud>
+    </Posicion>
+    <Identificador>I20251211-0021</Identificador>
+    <Codigo>05NL00</Codigo>
+    <Texto>C-I-TRA-01 VEHICULO PARADO EN ARCEN, ISLETA O APARTADERO A CIELO ABIERTO</Texto>
+    <FechaCierre>SIN CERRAR</FechaCierre>
+  </Incidencia>
+  <Incidencia>
+    <Posicion>
+      <Latitud>40.4744044874438</Latitud>
+      <Longitud>-3.67374638144654</Longitud>
+    </Posicion>
+    <Identificador>I20251211-0022</Identificador>
+    <Codigo>01XC10</Codigo>
+    <Texto>C-I-TRA-01 VEHICULO PARADO EN ARCEN, ISLETA O APARTADERO A CIELO ABIERTO</Texto>
+    <FechaCierre>SIN CERRAR</FechaCierre>
+  </Incidencia>
+  <Incidencia>
+    <Posicion>
+      <Latitud>40.3986828552616</Latitud>
+      <Longitud>-3.66906360466948</Longitud>
+    </Posicion>
+    <Identificador>I20251211-0023</Identificador>
+    <Codigo>10XC10</Codigo>
+    <Texto>C-P-ACC-01 ACCIDENTE LEVE A CIELO ABIERTO</Texto>
+    <FechaCierre>SIN CERRAR</FechaCierre>
+  </Incidencia>
+  <Incidencia>
+    <Posicion>
+      <Latitud>40.4285755334721</Latitud>
+      <Longitud>-3.73573847047151</Longitud>
+    </Posicion>
+    <Identificador>I20251211-0032</Identificador>
+    <Codigo>20XC00</Codigo>
+    <Texto>C-I-TRA-01 VEHICULO PARADO EN ARCEN, ISLETA O APARTADERO A CIELO ABIERTO</Texto>
+    <FechaCierre>SIN CERRAR</FechaCierre>
+  </Incidencia>
+  <Incidencia>
+    <Posicion>
+      <Latitud>40.3939040120274</Latitud>
+      <Longitud>-3.7031978065334</Longitud>
+    </Posicion>
+    <Identificador>I20251211-0033</Identificador>
+    <Codigo>14XL42</Codigo>
+    <Texto>T-I-TRA-02 VEHICULO DETENIDO OBSTRUYENDO PARCIALMENTE EL PASO EN TUNEL</Texto>
+    <FechaCierre>SIN CERRAR</FechaCierre>
+  </Incidencia>
+  <Incidencia>
+    <Posicion>
+      <Latitud>40.4101449996912</Latitud>
+      <Longitud>-3.66376172188974</Longitud>
+    </Posicion>
+    <Identificador>I20251212-0016</Identificador>
+    <Codigo>08NL60</Codigo>
+    <Texto>C-P-ACC-01 ACCIDENTE LEVE A CIELO ABIERTO</Texto>
+    <FechaCierre>SIN CERRAR</FechaCierre>
+  </Incidencia>
+</IncidenciasHistoricas>
