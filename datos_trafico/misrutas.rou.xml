@@ -1,0 +1,14 @@
+<routes>
+    # 1. Definimos un tipo de coche (puedes cambiar el color para verlo mejor)
+    <vType id="mi_coche" accel="2.6" decel="4.5" sigma="0.5" length="5" minGap="2.5" maxSpeed="13.89" color="blue" />
+
+    # 2. Definimos el camino que va a seguir 
+    <route id="ruta_granvia" edges="4334160#0 4334160#1 542325012 548526336 653929514 4328841#0 4328841#1 4328841#2 
+    651525544#0 651525544#1 651525544#2 104799919#0 104799919#1 839411286#0 839411286#1 839411286#2 839411286#3 32597086#0 32597086#1 
+    699385225#0 699385225#1 519453589"/>
+
+    # 3. Soltamos el coche en la simulación
+    <vehicle id="coche_1" type="mi_coche" route="ruta_granvia" depart="10"> <stop lane="519453589_0" duration="2000" parking="false"/> 
+    </vehicle> 
+
+</routes>
