@@ -1,29 +1,54 @@
 import traci
 
 def ejecutar():
-    # Iniciamos la simulación
-    traci.start(["sumo-gui", "-c", "simulacion_centro.sumocfg"])
-    
-    tiempo_llegada = 0
-    ha_llegado = False
-
-    while traci.simulation.getMinExpectedNumber() > 0:
-        traci.simulationStep()
+    try:
+        # 1. Iniciamos SUMO con tu archivo de configuración
+        # (Asegúrate de que el nombre del archivo .sumocfg sea el correcto)
+        traci.start(["sumo-gui", "-c", "simulacion_centro.sumocfg"])
         
-        # Comprobamos si el coche sigue en la red
-        if "coche_1" in traci.vehicle.getIDList():
-            # Si el coche está en estado de "parada" (está aparcando)
-            if traci.vehicle.isStopped("coche_1") and not ha_llegado:
-                tiempo_llegada = traci.simulation.getTime()
-                print(f"¡Destino alcanzado! El coche ha tardado: {tiempo_llegada} segundos")
-                ha_llegado = True
-        
-        # Si ya llegó, podemos parar el script de Python o dejarlo correr
-        if ha_llegado:
-            # Aquí podrías poner traci.close() si quieres que se cierre solo
-            pass
+        # 2. Preparamos las herramientas de medición
+        objetivos = ["coche_1", "coche_2", "coche_3"]
+        tiempos_llegada = {}
 
-    traci.close()
+        print(">>> Simulación iniciada. Esperando a que los coches lleguen al destino...")
+
+        # 3. Bucle principal de la simulación
+        while traci.simulation.getMinExpectedNumber() > 0:
+            traci.simulationStep() # Avanzar un segundo en la simulación
+            
+            vehiculos_actuales = traci.vehicle.getIDList()
+
+            for coche_id in objetivos:
+                # Si el coche está en el mapa y aún no hemos registrado su tiempo...
+                if coche_id in vehiculos_actuales and coche_id not in tiempos_llegada:
+                    
+                    # Comprobamos si ha llegado a su parada (isStopped)
+                    if traci.vehicle.isStopped(coche_id):
+                        tiempo_actual = traci.simulation.getTime()
+                        tiempos_llegada[coche_id] = tiempo_actual
+                        print(f"✅ ¡{coche_id} ha llegado! Tiempo: {tiempo_actual} segundos.")
+
+            # Si ya tenemos los tiempos de los 3, podemos cerrar si queremos
+            if len(tiempos_llegada) == 3:
+                print(">>> Los 3 coches han llegado a su destino.")
+                break
+
+        # 4. Resumen final para tu TFG
+        print("\n" + "="*30)
+        print("   RESUMEN DE RESULTADOS")
+        print("="*30)
+        # Ordenamos los resultados de más rápido a más lento
+        for coche in sorted(tiempos_llegada, key=tiempos_llegada.get):
+            print(f"📍 {coche}: {tiempos_llegada[coche]} seg")
+        print("="*30)
+
+        traci.close()
+
+    except traci.exceptions.FatalTraCIError:
+        # Esto evita las letras rojas feas si cierras SUMO a mano
+        print("\n[!] La conexión con SUMO se cerró.")
+    except Exception as e:
+        print(f"\n[!] Error inesperado: {e}")
 
 if __name__ == "__main__":
     ejecutar()

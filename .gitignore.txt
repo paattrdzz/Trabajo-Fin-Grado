@@ -1,0 +1,10 @@
+# Ignorar carpetas generadas por Python
+runner.py
+__pycache__/
+venv_tfg/
+.env
+
+# Ignorar archivos temporales de SUMO o logs
+*.log
+*.alt.xml
+
