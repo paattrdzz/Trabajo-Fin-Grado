@@ -3,6 +3,9 @@
         <net-file value="red/distritocentro.net.xml"/>
         <route-files value="datos_trafico/misrutas.rou.xml"/>
     </input>
+    <processing>
+        <lateral-resolution value="0.8"/>
+    </processing>
     <time>
         <begin value="0"/>
         <end value="360"/>
