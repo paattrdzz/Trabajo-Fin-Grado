@@ -3,11 +3,19 @@
         <net-file value="red/distritocentro.net.xml"/>
         <route-files value="datos_trafico/misrutas.rou.xml"/>
     </input>
+
     <processing>
         <lateral-resolution value="0.8"/>
     </processing>
+
     <time>
         <begin value="0"/>
-        <end value="360"/>
+        <end value="3600"/>
     </time>
+
+    <gui_only>
+        <start value="true"/>
+        <quit-on-end value="false"/>
+        <delay value="100"/>
+    </gui_only>
 </configuration>
