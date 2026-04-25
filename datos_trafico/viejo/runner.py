@@ -4,6 +4,7 @@ import traci
 
 # --- TUS DATOS ---
 CONFIG_FILE_NAME = "simulacion_centro.sumocfg"
+# modificar ubicacion o ruta en caso de usarlo
 
 # IDs extraídos de tus imágenes
 CALLE_ORIGEN = "4346299#6"   

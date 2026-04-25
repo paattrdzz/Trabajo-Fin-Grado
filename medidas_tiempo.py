@@ -3,6 +3,7 @@ from datetime import datetime
 import time
 import subprocess
 import os
+from control_semaforos import dar_paso_emergencias
 
 def ejecutar_adaptador():
     print("\n>>> Sincronizando datos con el Ayuntamiento...")
@@ -24,7 +25,7 @@ def ejecutar():
         while True: 
             ahora = datetime.now().strftime("%d/%m/%Y %H:%M:%S")
             # Lista de tus coches policía/emergencia
-            objetivos = ["coche_1", "coche_2", "coche_3"]
+            objetivos = ["coche_1", "coche_2", "coche_3", "coche_4", "coche_5", "coche_6"]
             tiempos_llegada = {}
 
             print(f"\n>>> Nueva ejecución iniciada el: {ahora}")
@@ -33,6 +34,8 @@ def ejecutar():
                 traci.simulationStep()
                 vehiculos_actuales = traci.vehicle.getIDList()
 
+                dar_paso_emergencias(vehiculos_actuales)
+                
                 for coche_id in objetivos:
                     if coche_id in vehiculos_actuales and coche_id not in tiempos_llegada:
                         if traci.vehicle.isStopped(coche_id):
@@ -40,7 +43,7 @@ def ejecutar():
                             tiempos_llegada[coche_id] = tiempo_actual
                             print(f"  🏁 {coche_id} ha llegado! Tiempo: {tiempo_actual:.2f} s")
 
-                if len(tiempos_llegada) == 3:
+                if len(tiempos_llegada) == 6:
                     break
 
             # Resumen de resultados
@@ -62,6 +65,13 @@ def ejecutar():
         print("\n[!] La conexión con SUMO se cerró.")
     except Exception as e:
         print(f"\n[!] Error inesperado: {e}")
+    finally:
+    # Esto asegura que el "teléfono" se cuelgue bien pase lo que pase
+        try:
+            traci.close()
+            print(">>> Conexión cerrada correctamente.")
+        except traci.exceptions.FatalTraCIError:
+            pass # Si ya estaba cerrado, no hacemos nada
 
 if __name__ == "__main__":
     ejecutar()

@@ -1,6 +1,25 @@
+import xml.etree.ElementTree as ET
+import os
+
+# DEFINIMOS LAS RUTAS FUERA (Mejor práctica)
+# Como en medidas_tiempo pusiste cwd="datos_trafico", aquí basta con el nombre del archivo
+RUTA_XML_MADRID = "../datos_madrid/informacion_trafico.xml"
+RUTA_MIS_RUTAS = "misrutas.rou.xml"
+
+mapeo = {
+    "f_4297": "4297",
+    "f_10386": "10386",
+    "f_4307": "4307",
+    "f_4259": "4259",
+    "f_4268": "4268",
+    "f_4262": "4262",
+    "f_7133": "7133",
+    "f_4208": "4208",
+    "f_3854": "3854",
+    "f_4291": "4291",  
+}
 
 def actualizar_rutas_con_datos_reales():
-    # ... (parte de descarga de datos) ...
     
     try:
         # Cargamos el XML de Madrid
@@ -32,7 +51,6 @@ def actualizar_rutas_con_datos_reales():
                 except:
                     nueva_intensidad = "1"
                 
-                # ESTA ES LA LÍNEA CLAVE
                 print(f"   📊 {flow_id} -> {nueva_intensidad.rjust(4)} veh/h (Sensor {id_sensor_real})")
                 
                 flow.set('vehsPerHour', nueva_intensidad)
@@ -43,3 +61,7 @@ def actualizar_rutas_con_datos_reales():
 
     except Exception as e:
         print(f"❌ Error interno: {e}")
+
+
+if __name__ == "__main__":
+    actualizar_rutas_con_datos_reales()

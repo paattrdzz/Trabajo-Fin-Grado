@@ -13,31 +13,38 @@
     <route id="ruta_3" edges="4334160#0 4334160#1 542325012 548526336 653929514 4328841#0 4328841#1 4328841#2 -651523356 -415583562#1 -415583562#0 1208079147#0 1208079147#1 32860478#0 32860478#1 7732110#0 7732110#1 7732110#2 7732110#3 7732110#4 1078983062 61678014#0 61678014#1 1393303085#0 4950756#0 4950756#1 4950756#2 4950756#3 -422999625 29499412#0 7971576#0 7971576#1 7971576#2 4308074#8 29499418#0 29499418#1 29499420#1 29499420#2 29499420#3 29499420#4 29499420#5 29499420#6 29499420#7 7971559#0 7971559#1 7971559#2 32865074#0 32865074#1 -423000381#1 -423000381#0 -651613048#1 -651613048#0 -43410312#1 -43410312#0 32597088 419119406#0 419119406#1 419119406#2 1388187400 -1388187399 -651543114 804457302#0 804457302#1 46098085#0 46098085#1 1382852734 4346299#0" />
 
 
-    <flow id="f_4297" type="coche_trafico" from="490391710#0" to="490391710#1" begin="0" end="3600" vehsPerHour="600" />
-    <flow id="f_10386" type="coche_trafico" from="429442228" to="-1238944954" begin="0" end="3600" vehsPerHour="840" />
-    <flow id="f_4307" type="coche_trafico" from="43410312#0" to="43410312#1" begin="0" end="3600" vehsPerHour="540" />
-
-    <flow id="f_4259" type="coche_trafico" from="4328841#0" to="4328841#2" begin="0" end="3600" vehsPerHour="568" />
-    <flow id="f_4268" type="coche_trafico" from="-423000381#1" to="-423000381#0" begin="0" end="3600" vehsPerHour="339" />
-    <flow id="f_4262" type="coche_trafico" from="32597086#0" to="32597086#1" begin="0" end="3600" vehsPerHour="252" />
-
-    <flow id="f_7133" type="coche_trafico" from="804457302#0" to="804457302#1" begin="0" end="3600" vehsPerHour="360" />
-    <flow id="f_4208" type="coche_trafico" from="46098085#0" to="46098085#1" begin="0" end="3600" vehsPerHour="144" />
-
-    <flow id="f_3854" type="coche_trafico" from="4487131#0" to="4487131#3" begin="0" end="3600" vehsPerHour="140" />
-    <flow id="f_4291" type="coche_trafico" from="363605884#0" to="363605884#3" begin="0" end="3600" vehsPerHour="120" />
-
-
-    
-    <vehicle id="coche_3" type="policia" route="ruta_3" depart="10">
+    <flow id="f_4297" type="coche_trafico" from="490391710#0" to="4346299#0" begin="0" end="3600" vehsPerHour="600" />
+    <flow id="f_10386" type="coche_trafico" from="429442228" to="1388187400" begin="0" end="3600" vehsPerHour="840" />
+    <flow id="f_4307" type="coche_trafico" from="43410312#0" to="4346299#0" begin="0" end="3600" vehsPerHour="540" />
+    <flow id="f_4259" type="coche_trafico" from="4328841#0" to="-936883629" begin="0" end="3600" vehsPerHour="568" />
+    <flow id="f_4268" type="coche_trafico" from="-423000381#1" to="4346299#0" begin="0" end="3600" vehsPerHour="339" />
+    <flow id="f_4262" type="coche_trafico" from="32597086#0" to="1388187400" begin="0" end="3600" vehsPerHour="252" />
+    <flow id="f_7133" type="coche_trafico" from="804457302#0" to="4346299#0" begin="0" end="3600" vehsPerHour="360" />
+    <flow id="f_4208" type="coche_trafico" from="46098085#0" to="429442228" begin="0" end="3600" vehsPerHour="144" />
+    <flow id="f_3854" type="coche_trafico" from="4487131#0" to="-936883629" begin="0" end="3600" vehsPerHour="140" />
+    <flow id="f_4291" type="coche_trafico" from="363605884#0" to="1388187400" begin="0" end="3600" vehsPerHour="120" />
+       
+    <vehicle id="coche_3" type="policia" route="ruta_3" depart="20">
         <stop lane="4346299#0_0" endPos="22" duration="1000" parking="true" />
     </vehicle>
 
-    <vehicle id="coche_1" type="coche" route="ruta_1" depart="20">
+    <vehicle id="coche_6" type="coche" route="ruta_3" depart="20">
+        <stop lane="4346299#0_0" endPos="22" duration="1000" parking="true" />
+    </vehicle>
+
+    <vehicle id="coche_4" type="coche" route="ruta_1" depart="20">
+        <stop lane="4346299#0_0" endPos="42" duration="1000" parking="true" />
+    </vehicle>
+
+        <vehicle id="coche_1" type="policia" route="ruta_1" depart="20">
         <stop lane="4346299#0_0" endPos="42" duration="1000" parking="true" />
     </vehicle>
 
     <vehicle id="coche_2" type="policia" route="ruta_2" depart="20">
+        <stop lane="4346299#0_0" endPos="32" duration="1000" parking="true" />
+    </vehicle>
+
+        <vehicle id="coche_5" type="coche" route="ruta_2" depart="20">
         <stop lane="4346299#0_0" endPos="32" duration="1000" parking="true" />
     </vehicle>
 
