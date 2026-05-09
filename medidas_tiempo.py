@@ -16,6 +16,16 @@ def ejecutar_adaptador():
 
 def ejecutar():
     try:
+        
+        respuesta = input("¿Desea activar el sistema de prioridad semafórica para emergencias? (s/n): ").lower()
+        prioridad_activa = True if respuesta == 's' else False
+        
+        if prioridad_activa:
+            print("\n>>> MODO: Prioridad de emergencias ACTIVA.")
+        else:
+            print("\n>>> MODO: Simulación de tráfico estándar (Sin prioridad).")
+
+
         # 1. Primera actualización
         ejecutar_adaptador()
 
@@ -34,7 +44,8 @@ def ejecutar():
                 traci.simulationStep()
                 vehiculos_actuales = traci.vehicle.getIDList()
 
-                dar_paso_emergencias(vehiculos_actuales)
+                if prioridad_activa:
+                    dar_paso_emergencias(vehiculos_actuales)
                 
                 for coche_id in objetivos:
                     if coche_id in vehiculos_actuales and coche_id not in tiempos_llegada:

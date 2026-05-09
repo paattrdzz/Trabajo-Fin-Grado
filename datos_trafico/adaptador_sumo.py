@@ -1,5 +1,8 @@
 import xml.etree.ElementTree as ET
 import os
+import requests
+from datetime import datetime
+
 
 # DEFINIMOS LAS RUTAS FUERA (Mejor práctica)
 # Como en medidas_tiempo pusiste cwd="datos_trafico", aquí basta con el nombre del archivo
@@ -19,8 +22,31 @@ mapeo = {
     "f_4291": "4291",  
 }
 
+def descargar_datos_madrid():
+    url = "https://informo.madrid.es/informo/tmadrid/pm.xml"
+    ahora = datetime.now().strftime('%d/%m/%Y %H:%M:%S')
+    print(f">>> [{ahora}] Conectando con el Ayuntamiento de Madrid...")
+    
+    try:
+        response = requests.get(url, timeout=10)
+        if response.status_code == 200:
+            # Guardamos el archivo en la ruta que espera el adaptador
+            with open(RUTA_XML_MADRID, 'wb') as f:
+                f.write(response.content)
+            print("   ✅ Datos descargados y guardados correctamente.")
+        else:
+            print(f"   ❌ Error: Código de estado {response.status_code}")
+            
+    except Exception as e:
+        print(f"   ❌ Error en la descarga: {e}")
+        return
+
+
 def actualizar_rutas_con_datos_reales():
     
+    descargar_datos_madrid()
+
+
     try:
         # Cargamos el XML de Madrid
         tree_madrid = ET.parse(RUTA_XML_MADRID)
