@@ -36,3 +36,11 @@ pip install -r requirements.txt
 # 4. Ejecutar la simulación
 python TFG.py
 
+
+Autora: Patricia Rodríguez Casado
+
+Escuela: Escuela Técnica Superior de Ingenieros de Telecomunicación (ETSIT-UPM)
+
+Tutor: Mario Sanz Rodrigo
+
+Año: 2026
