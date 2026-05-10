@@ -1,38 +1,38 @@
-Gemelo Digital para la Gestión de Emergencias (Madrid Centro)
+Este repositorio contiene el entorno de simulación para el Trabajo Fin de Grado enfocado en la diseño y desarrollo de un gemelo digital con priorización de vehículos de emergencia basado en OpenData. El sistema utiliza la interfaz TraCI para establecer una comunicación bidireccional entre la lógica de control en Python y el motor de micro-simulación SUMO.
 
-Este proyecto implementa un Gemelo Digital utilizando SUMO (Simulation of Urban MObility) y datos de Open Data Madrid para optimizar el tránsito de vehículos de emergencia en el Distrito Centro.
+REQUISITOS DE INSTALACIÓN
+
+Antes de iniciar el despliegue, asegúrese de contar con el software base necesario:
+
+Python 3.10+: Lenguaje vertebrador del proyecto encargado de la lógica de prioridad.  
+Eclipse SUMO (v1.18.0 o superior): Suite de simulación de tráfico microscópico indispensable para la ejecución del modelo virtual.
+
+Configuración del Entorno
+
+Para que la librería TraCI pueda orquestar el simulador, es obligatorio definir la variable de entorno SUMO_HOME. Esta variable permite que los scripts de Python localicen las herramientas binarias de SUMO en el sistema operativo.
+
+En Windows
+Busque "Editar las variables de entorno del sistema" en el menú inicio.
+En "Variables de entorno", cree una nueva Variable de sistema llamada SUMO_HOME.
+Asigne como valor la ruta de instalación de SUMO (por defecto: C:\Program Files (x86)\Eclipse\Sumo).
+
+En Linux / macOS
+Añada la siguiente línea al final de su archivo de configuración de shell (.bashrc o .zshrc):
+        export SUMO_HOME=/usr/share/sumo
+
+Descarga del repositorio
+    git clone https://github.com/paattrdzz/Trabajo-Fin-Grado
+
+Instalación de Dependencias
+El proyecto requiere librerías específicas para la gestión de datos y la comunicación con el simulador. Instálelas ejecutando el siguiente comando en la raíz del repositorio:
+    pip install -r requirements.txt
+
+Ejecución de la simulación
+Para iniciar la simulación con interfaz gráfica (sumo-gui), ejecute dentro de la carpeta clonada:
+    python TFG.py
 
 
-Instrucciones para el despliegue
 
-1. Requisitos Previos
-    ● Tener instalado Python 3.8 o superior.
-    ● Tener instalado Eclipse SUMO. Puedes descargarlo desde su web oficial.
 
-2. Configuración de la Variable de Entorno (CRÍTICO)
-El motor de simulación requiere que el sistema sepa dónde está instalado SUMO. Sin este paso, el script de Python no funcionará.
-    ● Windows: Crea una variable de entorno de sistema llamada SUMO_HOME que apunte a la carpeta donde instalaste SUMO (ejemplo: C:\Program Files (x86)\Eclipse\Sumo).
-    ● Linux/macOS: Añade al final de tu archivo .bashrc o .zshrc la línea: export SUMO_HOME=/usr/share/sumo.
-
-3. Instalación de Librerías
-Abre una terminal en la carpeta del proyecto y ejecuta el siguiente comando para instalar las dependencias necesarias (traci, pandas, requests):
-
-pip install -r requirements.txt
-
-4. Cómo Ejecutar la Simulación
-Una vez configurado todo, lanza el script principal para abrir la interfaz gráfica de SUMO y ver la lógica de prioridad en funcionamiento:
-python TFG.py
-
-📊 Sobre el TFG
-
-Este trabajo utiliza rutas relativas para todos los archivos de configuración (.net.xml, .rou.xml,.sumocfg), lo que garantiza que el proyecto sea portable y reproducible en cualquier entorno detrabajo.
-
-Archivo/Carpeta Descripción
-
-main.py Script principal que conecta Python con SUMO mediante TraCI.
-
-requirements.txt Lista de dependencias de software necesarias.
-
-red/ Contiene la red vial del Distrito Centro y las rutas de tráfico. 
 
 
