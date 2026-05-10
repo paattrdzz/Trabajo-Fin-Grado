@@ -4,7 +4,7 @@
 [![SUMO](https://img.shields.io/badge/Simulador-Eclipse%20SUMO-orange?style=flat-square)](https://eclipse.dev/sumo/)
 [![OpenData](https://img.shields.io/badge/Data-Madrid%20Open%20Data-blue?style=flat-square)](https://datos.madrid.es/)
 
-[cite_start]Este proyecto implementa un **Gemelo Digital** utilizando **SUMO** (Simulation of Urban MObility) [cite: 63] [cite_start]y datos de **Open Data Madrid** [cite: 58] para optimizar el tránsito de vehículos de emergencia en el Distrito Centro. [cite_start]El sistema utiliza la interfaz **TraCI** para establecer una comunicación bidireccional entre la lógica de control en Python y el entorno virtual[cite: 326, 327].
+Este proyecto implementa un **Gemelo Digital** utilizando **SUMO** (Simulation of Urban MObility) y datos de **Open Data Madrid** para optimizar el tránsito de vehículos de emergencia en el Distrito Centro. El sistema utiliza la interfaz **TraCI** para establecer una comunicación bidireccional entre la lógica de control en Python y el entorno virtual.
 
 ---
 
@@ -13,8 +13,8 @@
 Para que el sistema funcione correctamente, siga estos pasos en orden:
 
 ### **Paso A: Software Base**
-* [cite_start]**Python 3.10+**: Lenguaje vertebrador encargado de la lógica de prioridad[cite: 332].
-* [cite_start]**Eclipse SUMO**: Motor de simulación microscópica indispensable[cite: 227].
+* **Python 3.10+**: Lenguaje vertebrador encargado de la lógica de prioridad.
+* **Eclipse SUMO**: Motor de simulación microscópica indispensable.
 
 ### **Paso B: Configuración de Variable de Entorno (CRÍTICO)** ⚠️
 El script de Python requiere saber dónde está instalado SUMO. Sin este paso, el sistema no podrá localizar las herramientas binarias del simulador.
@@ -26,7 +26,7 @@ Primero, descargue el proyecto desde GitHub. Después, abra una terminal dentro 
 
 ```bash
 # 1. Clonar el repositorio
-git clone [https://github.com/paattrdzz/Trabajo-Fin-Grado.git](https://github.com/paattrdzz/Trabajo-Fin-Grado.git)
+git clone https://github.com/paattrdzz/Trabajo-Fin-Grado.git
 
 # 2. Entrar en la carpeta
 cd Trabajo-Fin-Grado
@@ -34,12 +34,8 @@ cd Trabajo-Fin-Grado
 # 3. Instalar librerías
 pip install -r requirements.txt
 
-Ejecución de la simulación
-Para iniciar la simulación con interfaz gráfica (sumo-gui), ejecute dentro de la carpeta clonada:
-    python TFG.py
-
-
-
+# 4. Ejecutar la simulación
+python TFG.py
 
 
 
