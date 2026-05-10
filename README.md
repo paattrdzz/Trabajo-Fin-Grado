@@ -36,6 +36,7 @@ pip install -r requirements.txt
 # 4. Ejecutar la simulación
 python TFG.py
 
+```
 
 Autora: Patricia Rodríguez Casado
 
