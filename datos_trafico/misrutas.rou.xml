@@ -1,11 +1,10 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <routes>
-    <vType id="coche" accel="2.6" decel="4.5" sigma="0.5" length="5" width="2" minGap="2.5" maxSpeed="5.5" color="yellow" />
 
-    <vType id="policia" vClass="emergency" guiShape="police" color="blue" length="5.0" width="2.0" maxSpeed="25.0" accel="4.5" decel="9.0" speedFactor="1.5" jmDriveAfterRedTime="3600" jmIgnoreKeepClearTime="0" jmCrossingGap="0.5" lcStrategic="10.0" lcAssertive="5.0" lcCooperative="0.0" />
-    
-    <vType id="coche_trafico" accel="1.0" decel="3.0" sigma="0.5" length="5" width="2" color="0.7,0.7,0.7" />
-
+    <vType id="policia" vClass="emergency" guiShape="emergency" color="blue" maxSpeed="50.0" speedFactor="1.5" accel="5.0" decel="9.0" sigma="0.2" jmIgnoreKeepClearTime="-1" jmCrossingGap="0.2" lcPushy="1.0" lcAssertive="5.0" lcImpatience="1.0" lcStrategic="10.0" lcSpeedGain="10.0" />
+    <vType id="coche" vClass="passenger" length="5.0" width="2.0" minGap="2.5" color="yellow" lcCooperative="1.0" lcSpeedGain="0.5" />
+    <vType id="coche_trafico" vClass="passenger" length="5.0" width="2.0" color="0.7,0.7,0.7" lcCooperative="1.0" lcSpeedGain="0.5" />
+        
     <route id="ruta_1" edges="4334160#0 4487131#0 4487131#1 4487131#2 4487131#3 363605884#0 363605884#1 363605884#2 363605884#3 1225160454 4487154#0 4487154#1 82280716#0 82280716#1 -1224877593 4487158#0 4487158#1 519453589 490391710#0 490391710#1 651531200 490391709 429442228 -1238944954 -155551743#3 -155551743#2 -155551743#1 -155551743#0 -936883629 -423000381#1 -423000381#0 -651613048#1 -651613048#0 -43410312#1 -43410312#0 32597088 419119406#0 419119406#1 419119406#2 1388187400 -1388187399 -651543114 804457302#0 804457302#1 46098085#0 46098085#1 1382852734 4346299#0" />
     
     <route id="ruta_2" edges="4334160#0 4334160#1 542325012 548526336 653929514 4328841#0 4328841#1 4328841#2 651525544#0 651525544#1 651525544#2 104799919#0 104799919#1 839411286#0 839411286#1 839411286#2 839411286#3 32597086#0 32597086#1 699385225#0 699385225#1 519453589 490391710#0 490391710#1 651531200 490391709 429442228 -1238944954 -155551743#3 -155551743#2 -155551743#1 -155551743#0 -936883629 -423000381#1 -423000381#0 -651613048#1 -651613048#0 -43410312#1 -43410312#0 32597088 419119406#0 419119406#1 419119406#2 1388187400 -1388187399 -651543114 804457302#0 804457302#1 46098085#0 46098085#1 1382852734 4346299#0" />
@@ -13,16 +12,16 @@
     <route id="ruta_3" edges="4334160#0 4334160#1 542325012 548526336 653929514 4328841#0 4328841#1 4328841#2 -651523356 -415583562#1 -415583562#0 1208079147#0 1208079147#1 32860478#0 32860478#1 7732110#0 7732110#1 7732110#2 7732110#3 7732110#4 1078983062 61678014#0 61678014#1 1393303085#0 4950756#0 4950756#1 4950756#2 4950756#3 -422999625 29499412#0 7971576#0 7971576#1 7971576#2 4308074#8 29499418#0 29499418#1 29499420#1 29499420#2 29499420#3 29499420#4 29499420#5 29499420#6 29499420#7 7971559#0 7971559#1 7971559#2 32865074#0 32865074#1 -423000381#1 -423000381#0 -651613048#1 -651613048#0 -43410312#1 -43410312#0 32597088 419119406#0 419119406#1 419119406#2 1388187400 -1388187399 -651543114 804457302#0 804457302#1 46098085#0 46098085#1 1382852734 4346299#0" />
 
 
-    <flow id="f_4297" type="coche_trafico" from="490391710#0" to="4346299#0" begin="0" end="3600" vehsPerHour="680" />
-    <flow id="f_10386" type="coche_trafico" from="429442228" to="1388187400" begin="0" end="3600" vehsPerHour="320" />
-    <flow id="f_4307" type="coche_trafico" from="43410312#0" to="4346299#0" begin="0" end="3600" vehsPerHour="240" />
-    <flow id="f_4259" type="coche_trafico" from="4328841#0" to="-936883629" begin="0" end="3600" vehsPerHour="280" />
-    <flow id="f_4268" type="coche_trafico" from="-423000381#1" to="4346299#0" begin="0" end="3600" vehsPerHour="180" />
-    <flow id="f_4262" type="coche_trafico" from="32597086#0" to="1388187400" begin="0" end="3600" vehsPerHour="341" />
-    <flow id="f_7133" type="coche_trafico" from="804457302#0" to="4346299#0" begin="0" end="3600" vehsPerHour="280" />
-    <flow id="f_4208" type="coche_trafico" from="46098085#0" to="429442228" begin="0" end="3600" vehsPerHour="53" />
-    <flow id="f_3854" type="coche_trafico" from="4487131#0" to="-936883629" begin="0" end="3600" vehsPerHour="169" />
-    <flow id="f_4291" type="coche_trafico" from="363605884#0" to="1388187400" begin="0" end="3600" vehsPerHour="80" />
+    <flow id="f_4297" type="coche_trafico" from="490391710#0" to="4346299#0" begin="0" end="3600" vehsPerHour="1116" />
+    <flow id="f_10386" type="coche_trafico" from="429442228" to="1388187400" begin="0" end="3600" vehsPerHour="1224" />
+    <flow id="f_4307" type="coche_trafico" from="43410312#0" to="4346299#0" begin="0" end="3600" vehsPerHour="900" />
+    <flow id="f_4259" type="coche_trafico" from="4328841#0" to="-936883629" begin="0" end="3600" vehsPerHour="455" />
+    <flow id="f_4268" type="coche_trafico" from="-423000381#1" to="4346299#0" begin="0" end="3600" vehsPerHour="320" />
+    <flow id="f_4262" type="coche_trafico" from="32597086#0" to="1388187400" begin="0" end="3600" vehsPerHour="324" />
+    <flow id="f_7133" type="coche_trafico" from="804457302#0" to="4346299#0" begin="0" end="3600" vehsPerHour="560" />
+    <flow id="f_4208" type="coche_trafico" from="46098085#0" to="429442228" begin="0" end="3600" vehsPerHour="102" />
+    <flow id="f_3854" type="coche_trafico" from="4487131#0" to="-936883629" begin="0" end="3600" vehsPerHour="200" />
+    <flow id="f_4291" type="coche_trafico" from="363605884#0" to="1388187400" begin="0" end="3600" vehsPerHour="252" />
        
     <vehicle id="coche_3" type="policia" route="ruta_3" depart="20">
         <stop lane="4346299#0_0" endPos="22" duration="1000" parking="true" />
@@ -32,13 +31,14 @@
         <stop lane="4346299#0_0" endPos="22" duration="1000" parking="true" />
     </vehicle>
 
+
+    <vehicle id="coche_1" type="policia" route="ruta_1" depart="20">
+        <stop lane="4346299#0_0" endPos="42" duration="1000" parking="true" />
+    </vehicle>    
     <vehicle id="coche_4" type="coche" route="ruta_1" depart="20">
         <stop lane="4346299#0_0" endPos="42" duration="1000" parking="true" />
     </vehicle>
 
-        <vehicle id="coche_1" type="policia" route="ruta_1" depart="20">
-        <stop lane="4346299#0_0" endPos="42" duration="1000" parking="true" />
-    </vehicle>
 
     <vehicle id="coche_2" type="policia" route="ruta_2" depart="20">
         <stop lane="4346299#0_0" endPos="32" duration="1000" parking="true" />

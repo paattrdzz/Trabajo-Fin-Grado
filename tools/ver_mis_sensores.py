@@ -67,7 +67,7 @@ def obtener_datos_madrid():
         resultado = sensores_centro[sensores_centro['Intensidad'] != 'N/A']
         
         # Muestro el top 20 de sensores (incluyendo Gran Vía, Callao, etc.)
-        print(resultado[['id', 'nombre', 'Intensidad', 'Carga %']].head(20))
+        print(resultado[['id', 'nombre', 'Intensidad', 'Carga %']].head(50))
         print("="*85)
 
     except Exception as e:
