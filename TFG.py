@@ -4,6 +4,7 @@ import time
 import subprocess
 import os
 from control_semaforos import dar_paso_emergencias
+from resultados.metricas import guardar_resultados, mostrar_medias
 
 def ejecutar_adaptador():
     print("\n>>> Sincronizando datos con el Ayuntamiento...")
@@ -67,6 +68,16 @@ def ejecutar():
             for coche in sorted(tiempos_llegada, key=tiempos_llegada.get):
                 print(f" {coche.ljust(12)}: {tiempos_llegada[coche]:.2f} seg")
             print("═"*45)
+
+            # Guardar resultados
+            guardar_resultados(
+                tiempos_llegada,
+                modo,
+                ahora
+            )
+
+            # Mostrar medias acumuladas
+            mostrar_medias()
 
             # 5. RECARGA DINÁMICA
             print("\n[INFO] Esperando 120s para actualizar tráfico y reiniciar...")
