@@ -14,12 +14,14 @@ def ejecutar_adaptador():
     except Exception as e:
         print(f"[!] Error al actualizar datos: {e}")
 
+
 def ejecutar():
     try:
         
         respuesta = input("¿Desea activar el sistema de prioridad semafórica para emergencias? (s/n): ").lower()
         prioridad_activa = True if respuesta == 's' else False
-        
+        modo = "CON_PRIORIDAD" if prioridad_activa else "SIN_PRIORIDAD"
+
         if prioridad_activa:
             print("\n>>> MODO: Prioridad de emergencias ACTIVA.")
         else:
@@ -54,6 +56,7 @@ def ejecutar():
                             tiempos_llegada[coche_id] = tiempo_actual
                             print(f"  🏁 {coche_id} ha llegado! Tiempo: {tiempo_actual:.2f} s")
 
+
                 if len(tiempos_llegada) == 6:
                     break
 
@@ -66,8 +69,8 @@ def ejecutar():
             print("═"*45)
 
             # 5. RECARGA DINÁMICA
-            print("\n[INFO] Esperando 30s para actualizar tráfico y reiniciar...")
-            time.sleep(30) 
+            print("\n[INFO] Esperando 120s para actualizar tráfico y reiniciar...")
+            time.sleep(120) 
             
             ejecutar_adaptador()
             traci.load(["-c", "simulacion_centro.sumocfg", "--start"]) 

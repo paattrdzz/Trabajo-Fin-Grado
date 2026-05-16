@@ -17,7 +17,7 @@ def dar_paso_emergencias(vehiculos_actuales):
                 tls_index = semaforos[0][1]    
                 distancia = semaforos[0][2]    
                 
-                if distancia < 100:
+                if distancia < 150:
                     try:
                         # Silenciamos el Warning de versión de SUMO
                         with warnings.catch_warnings():

@@ -5,8 +5,8 @@ from datetime import datetime
 
 
 # DEFINIMOS LAS RUTAS FUERA (Mejor práctica)
-# Como en medidas_tiempo pusiste cwd="datos_trafico", aquí basta con el nombre del archivo
-RUTA_XML_MADRID = "../datos_madrid/informacion_trafico.xml"
+# Como en TFG pusiste cwd="datos_trafico", aquí basta con el nombre del archivo
+RUTA_XML_MADRID = "informacion_trafico.xml"
 RUTA_MIS_RUTAS = "misrutas.rou.xml"
 
 mapeo = {
