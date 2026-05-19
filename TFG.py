@@ -80,8 +80,8 @@ def ejecutar():
             mostrar_medias()
 
             # 5. RECARGA DINÁMICA
-            print("\n[INFO] Esperando 120s para actualizar tráfico y reiniciar...")
-            time.sleep(120) 
+            print("\n[INFO] Esperando 240s para actualizar tráfico y reiniciar...")
+            time.sleep(240) 
             
             ejecutar_adaptador()
             traci.load(["-c", "simulacion_centro.sumocfg", "--start"]) 
