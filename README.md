@@ -12,7 +12,7 @@ Este proyecto implementa un **Gemelo Digital** utilizando **SUMO** (Simulation o
 Para que el sistema funcione correctamente, siga estos pasos en orden:
 
 ### **Paso A: Software Base**
-* **Python 3.10+**: Lenguaje encargado de la lógica de prioridad.
+* **Python 3.13.2**: Lenguaje encargado de la lógica de prioridad.
 * **Eclipse SUMO versión 1.24.0**: Motor de simulación microscópica indispensable.
 
 ### **Paso B: Configuración de Variable de Entorno (IMPORTANTE)** ⚠️
