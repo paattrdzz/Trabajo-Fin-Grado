@@ -13,7 +13,7 @@ Para que el sistema funcione correctamente, siga estos pasos en orden:
 
 ### **Paso A: Software Base**
 * **Python 3.10+**: Lenguaje encargado de la lógica de prioridad.
-* **Eclipse SUMO**: Motor de simulación microscópica indispensable.
+* **Eclipse SUMO versión 1.24.0**: Motor de simulación microscópica indispensable.
 
 ### **Paso B: Configuración de Variable de Entorno (IMPORTANTE)** ⚠️
 El script de Python requiere saber dónde está instalado SUMO. Sin este paso, el sistema no podrá localizar las herramientas binarias del simulador.
